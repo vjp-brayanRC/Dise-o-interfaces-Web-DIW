@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CATÁLOGO DE ARTE</title>
+</head>
+
+<body>
+    <fieldset>
+        <div class="formulario">
+            <h1 style="text-align: center;">CATÁLOGO DE ARTE</h1>
+
+            <form>
+
+                <!-- Términos de búsqueda -->
+                <div class="grupo">
+                    <p>Introduce los términos de búsqueda:</p>
+                </div>
+
+                <!-- Fila horizontal con tabla -->
+                <table>
+                    <tr>
+                        <!-- OBRA -->
+                        <td>
+                            <div class="grupo">
+                                <p>OBRA</p>
+                                <label for="titulo">Título</label>
+                                <input type="text" id="titulo" name="titulo"><br><br>
+
+                                <label for="autor">Autor</label>
+                                <input type="text" id="autor" name="autor">
+                            </div>
+                        </td>
+
+                        <!-- TIPO -->
+                        <td>
+                            <div class="grupo">
+                                <p>TIPO</p>
+                                <div class="checkboxes">
+                                    <label><input type="checkbox" name="tipo" value="Escritura"> Escritura</label><br>
+                                    <label><input type="checkbox" name="tipo" value="Arquitectura">
+                                        Arquitectura</label><br>
+                                    <label><input type="checkbox" name="tipo" value="Pintura"> Pintura</label>
+                                </div>
+                            </div>
+                        </td>
+
+                        <!-- DISPONIBILIDAD -->
+                        <td>
+                            <div class="grupo">
+                                <p>DISPONIBILIDAD</p>
+                                <div class="radios">
+                                    <label><input type="radio" name="disponibilidad" value="Museo"> Museo / Acceso
+                                        público</label><br>
+                                    <label><input type="radio" name="disponibilidad" value="Privada"> Colección
+                                        privada</label>
+                                </div>
+                            </div>
+                        </td>
+
+                        <!-- ESTILO -->
+                        <td>
+                            <div class="grupo">
+                                <p>ESTILO</p>
+                                <select name="estilo">
+                                    <option value="clasico" selected>Clásico</option>
+                                    <option value="moderno">Moderno</option>
+                                    <option value="abstracto">Abstracto</option>
+                                    <option value="renacentista">Renacentista</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- Sugerencias -->
+                <div class="grupo">
+                    <p>Háganos saber sus sugerencias:</p>
+                    <textarea name="sugerencias" rows="4" placeholder="Me gustaría indicar que..."></textarea>
+                </div>
+
+                <!-- Botón -->
+                <button type="submit">Buscar</button>
+
+            </form>
+        </div>
+    </fieldset>
+</body>
+
+</html>
