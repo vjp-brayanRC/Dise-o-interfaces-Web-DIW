@@ -1,0 +1,43 @@
+/* A: Relleno izquierdo y derecho de 10px para todo el cuerpo */
+body {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: Arial, sans-serif;
+}
+
+/* h1: borde azul, relleno 10px (B), margen 30px arriba y abajo (C) */
+h1 {
+  border: 2px solid #00F;
+  padding: 10px;
+  margin: 30px 0;
+}
+
+/* h2: borde gris, relleno 10px (B), margen 15px arriba y abajo (E) */
+h2 {
+  border: 2px solid #AAA;
+  padding: 10px;
+  margin: 15px 0;
+}
+
+/* ul: borde verde, relleno 10px (B), margen 30px arriba y abajo (C) */
+ul {
+  border: 2px solid #0F0;
+  padding: 10px;
+  margin: 30px 0;
+  list-style-type: disc;
+}
+
+/* li: margen inferior de 15px (F) */
+li {
+  margin-bottom: 15px;
+}
+
+/* Último li sin margen inferior extra */
+li:last-child {
+  margin-bottom: 0;
+}
+
+/* p: relleno 5px (D), sin bordes ni márgenes adicionales */
+p {
+  padding: 5px;
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Campus Virtual UEx</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<style>
+/* Fondo general y tipografía */
+/* Fondo general y tipografía */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('Fondo.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #000;
+}
+
+/* Contenedor principal: solo cabecera + login */
+.contenedor {
+  max-width: 500px;
+  margin: 80px auto;
+  background-color: #f2f2f2;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Cabecera con logo */
+header img {
+  max-height: 80px;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+/* Título principal */
+.login-box h1 {
+  font-size: 1.5em;
+  color: #006699;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Subtítulo */
+.login-box p {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Etiquetas de formulario */
+form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Campos de entrada */
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Botones de acción */
+.botones {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.botones button {
+  padding: 10px 25px;
+  background-color: #006699;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.botones button:hover {
+  background-color: #004466;
+}
+
+/* Idiomas fuera de la caja gris */
+.idiomas {
+  max-width: 500px;
+  margin: 20px auto;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.idiomas a {
+  color: #006699;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+/* Ayuda fuera de la caja gris */
+.ayuda {
+  max-width: 500px;
+  margin: 20px auto;
+  font-size: 0.9em;
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* Pie de página */
+footer {
+  max-width: 500px;
+  margin: 30px auto;
+  text-align: center;
+  font-size: 0.8em;
+  color: #666;
+}
+
+
+
+</style>
+<body>
+  <body>
+  <div class="contenedor">
+    <header>
+      <img src="logo.png" alt="Campus Virtual Universidad de Extremadura">
+    </header>
+
+    <main class="login-box">
+      <h1>campus virtual Universidad de Extremadura</h1>
+      <p>Introduzca su correo (UEx) y Contraseña.</p>
+
+      <form>
+        <label for="usuario">Identificador de correo (UEx):</label>
+        <input type="text" id="usuario" name="usuario">
+
+        <label for="clave">Contraseña:</label>
+        <input type="password" id="clave" name="clave">
+
+        <div class="botones">
+          <button type="submit">INICIAR SESIÓN</button>
+          <button type="reset">LIMPIAR</button>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <!-- Estos elementos están ahora fuera de la caja gris -->
+  <div class="idiomas">
+    <h5>Idiomas:</h5>
+    <a href="#">English</a> | <a href="#">Spanish</a> | <a href="#">French</a> | <a href="#">Portuguese</a>
+  </div>
+
+  <div class="ayuda">
+    <p>Si tiene cualquier incidencia, contacte por favor con el Servicio de Apoyo a la Docencia Virtual.</p>
+    <p>Si ha olvidado su contraseña puede cambiarla haciendo click en uno de estos enlaces según su tipo de usuario: <a href="#">alumnos.unex.es</a> | <a href="#">alumnos.unex.es</a></p>
+  </div>
+
+  <footer>
+    <p>Copyright © 2005 - 2012 2esig, Inc. All rights reserved.</p>
+  </footer>
+</body>
+
+  </div>
+</body>
+</html>
