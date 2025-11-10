@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #f0f0f0;
+}
+
+.encabezado {
+  background-color: crimson;
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+}
+
+.menu {
+  background-color: #ccc;
+  display: flex;
+  justify-content: space-between; /* Espaciados de forma equitativa */
+  align-items: center;
+}
+
+.menu a {
+  flex: 1;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+}
+
+.menu a:hover {
+  background-color: #999;
+  color: black;
+}
+
+.contenido{
+  background-color: limegreen;
+  height: 150px;
+}
+

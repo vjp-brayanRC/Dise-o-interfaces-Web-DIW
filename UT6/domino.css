@@ -1,0 +1,47 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f7f7f7;
+    gap: 12px;
+  }
+
+  .domino {
+    width: 80px;
+    height: 160px;
+    background: white;
+    border: 3px solid #222;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 6px;
+  }
+
+  .half {
+    flex: 1;
+    position: relative;
+  }
+
+  .divider {
+    height: 3px;
+    background: #222;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    background: #222;
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  /* Posiciones base dentro de una mitad */
+  .tl { top: 15%; left: 20%; }
+  .tr { top: 15%; right: 20%; }
+  .ml { top: 45%; left: 20%; }
+  .mr { top: 45%; right: 20%; }
+  .bl { bottom: 15%; left: 20%; }
+  .br { bottom: 15%; right: 20%; }
+  .c { top: 45%; left: 45%; }

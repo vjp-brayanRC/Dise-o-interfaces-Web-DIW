@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #fff;
+}
+
+/* Contenedor general */
+.contenedor {
+  border: 1px solid #ccc;
+  margin-bottom: 30px;
+}
+
+/* Encabezado rojo */
+.encabezado {
+  background-color: crimson;
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Área verde principal */
+.area {
+  background-color: limegreen;
+  height: 200px;
+  display: flex;
+  align-items: flex-start; /* menú arriba */
+}
+
+/* Menú vertical dentro del área verde */
+.menu {
+  display: flex;
+  flex-direction: column;
+  background-color: #ccc;  
+  width: 150px;
+  
+}
+
+/* Enlaces del menú */
+.menu a {
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  background-color: #bbb;
+  border-bottom: 1px solid #999;
+  transition: background 0.3s;
+}
+
+.menu a:hover {
+  background-color: #555;
+  color: white;
+}

@@ -1,0 +1,98 @@
+/* ====== Estilos base ====== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Contenedor principal */
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;  /* límite para pantallas grandes */
+  margin: 0 auto;
+  gap: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Bloques genéricos */
+.bloque {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Colores y tamaños iniciales */
+.amarillo {
+  background-color: yellow;
+  height: 20vh;
+  min-height: 100px;
+}
+
+.azul {
+  background-color: blue;
+  height: 25vh;
+  min-height: 150px;
+}
+
+.fila-inferior {
+  display: flex;
+  flex-wrap: wrap; /* permite reorganizar si no hay espacio */
+  gap: 10px;
+}
+
+.naranja {
+  background-color: orange;
+  flex: 1;
+  height: 20vh;
+  min-height: 100px;
+}
+
+.verde {
+  background-color: green;
+  flex: 1;
+  height: 20vh;
+  min-height: 100px;
+}
+
+/* ====== 🧩 Responsive Design ====== */
+
+/* Pantallas medianas (tablets, hasta 900px) */
+@media (max-width: 900px) {
+  .contenedor {
+    padding: 8px;
+  }
+
+  .amarillo {
+    height: 18vh;
+  }
+
+  .azul {
+    height: 22vh;
+  }
+
+  .naranja,
+  .verde {
+    height: 18vh;
+  }
+}
+
+/* Pantallas pequeñas (móviles, hasta 600px) */
+@media (max-width: 600px) {
+  .fila-inferior {
+    flex-direction: column;
+  }
+
+  .bloque {
+    border-radius: 5px;
+  }
+
+  .amarillo, .azul, .naranja, .verde {
+    height: auto;
+    min-height: 80px;
+  }
+}
+
+

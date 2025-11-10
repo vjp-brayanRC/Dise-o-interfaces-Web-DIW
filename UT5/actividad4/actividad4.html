@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biografía Personal</title>
+  <style>
+    /* --- Estilos base --- */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #e8f0f7, #d0e3f0);
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    /* --- Foto de perfil --- */
+    .photo {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      margin-bottom: 15px;
+      background-color: #fff;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .name {
+      font-size: 1.6em;
+      font-weight: bold;
+      color: #222;
+      margin-bottom: 40px;
+    }
+
+    /* --- Secciones informativas --- */
+    .info {
+  display: flex;
+  justify-content: center;   /* 🔥 Centra los tres div horizontalmente */
+  align-items: center;       /* Centra verticalmente si hay más altura */
+  gap: 40px;                 /* Espaciado entre las secciones */
+  flex-wrap: wrap;           /* Para que se acomoden bien en pantallas pequeñas */
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 20px;
+  text-align: center;
+}
+
+.section {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 300px;              /* Tamaño fijo para que queden iguales */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+    .section h2 {
+      margin-top: 0;
+      color: #2c3e50;
+      font-size: 1.3em;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .section p {
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .section img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    /* --- Responsive --- */
+    @media (min-width: 700px) {
+      .info {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center; /* ✅ mantiene centrado también en pantallas grandes */
+      }
+
+      .section {
+        flex: 1 1 300px;
+        max-width: 320px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="photo">
+      <img src="perfil.jpg" alt="Foto personal">
+    </div>
+    <div class="name">Brayan Rodríguez</div>
+  </div>
+
+  <div class="info">
+    <div class="section">
+      <h2>Aficiones</h2>
+      <p>Me encanta el rugby, el senderismo y leer sobre mitologías.</p>
+      <img src="tackle-fafdeklerk-boks-lions.jpg" alt="Imagen de aficiones">
+    </div>
+
+    <div class="section">
+      <h2>Música Favorita</h2>
+      <p>Mi grupo favorito es Imagine Dragons. También disfruto de la música urbana, sobre todo Eminem.</p>
+      <img src="theeminemshowjpg.jpg" alt="Imagen de música">
+    </div>
+
+    <div class="section">
+      <h2>Cine Favorito</h2>
+      <p>Me apasiona el cine, suelo ir una vez por semana. Mi película favorita es <em>El Señor de los Anillos: El Retorno del Rey</em>.</p>
+      <img src="lotr.png" alt="Imagen de cine">
+    </div>
+  </div>
+
+</body>
+</html>
+

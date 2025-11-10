@@ -1,0 +1,47 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f7f7f7;
+  margin: 0;
+}
+
+.contenedor {
+  display: grid;
+  grid-template-areas:
+    "amarillo amarillo"
+    "verde azul"
+    "naranja naranja";
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+  width: 80%;
+  max-width: 600px;
+}
+
+/* Colores */
+.amarillo { background: yellow; grid-area: amarillo; height: 50px; }
+.verde    { background: green;  grid-area: verde;   height: 150px; }
+.azul     { background: blue;   grid-area: azul;    height: 150px; }
+.naranja  { background: orange; grid-area: naranja; height: 50px; }
+
+/* --- Versión móvil (más estrecha) --- */
+@media (max-width: 768px) {
+  .contenedor {
+    grid-template-areas:
+      "amarillo"
+      "verde"
+      "azul"
+      "naranja";
+    grid-template-columns: 1fr;
+  }
+
+  .verde {
+    height: 50px;
+  }
+
+  .azul {
+    height: 150px;
+  }
+}
+

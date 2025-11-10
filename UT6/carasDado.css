@@ -1,0 +1,38 @@
+  body {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 40px;
+      background-color: #222;
+    }
+
+    .cara {
+      width: 100px;
+      height: 100px;
+      /* decidi poner este color por que no me gustaba el rojo */
+      background-color: rgb(255, 153, 0);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      position: relative;
+    }
+
+    .punto {
+      width: 20px;
+      height: 20px;
+      background-color: white;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    /* Posiciones para los puntos */
+    .centro        { top: 40px; left: 40px; }
+    .esquina-izq-sup { top: 10px; left: 10px; }
+    .esquina-der-sup { top: 10px; right: 10px; }
+    .esquina-izq-inf { bottom: 10px; left: 10px; }
+    .esquina-der-inf { bottom: 10px; right: 10px; }
+    .medio-izq     { top: 40px; left: 10px; }
+    .medio-der     { top: 40px; right: 10px; }

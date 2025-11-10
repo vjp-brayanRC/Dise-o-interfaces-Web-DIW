@@ -1,0 +1,76 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f8f8f8;
+  margin: 0;
+}
+
+.contenedor {
+  display: grid;
+  gap: 10px;
+  width: 90%;
+  max-width: 900px;
+}
+
+/* Colores */
+.amarillo { background: yellow; height: 60px; }
+.verde    { background: green; height: 150px; }
+.azul     { background: blue; height: 150px; }
+.rojo     { background: red; height: 150px; }
+.naranja  { background: orange; height: 60px; }
+
+/* --- Diseño grande (Desktop) --- */
+@media (min-width: 901px) {
+  .contenedor {
+    grid-template-areas:
+      "amarillo amarillo amarillo"
+      "verde azul rojo"
+      "naranja naranja naranja";
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+
+  .amarillo { grid-area: amarillo; }
+  .verde    { grid-area: verde; }
+  .azul     { grid-area: azul; }
+  .rojo     { grid-area: rojo; }
+  .naranja  { grid-area: naranja; }
+}
+
+/* --- Diseño mediano (Tablet) --- */
+@media (max-width: 900px) and (min-width: 601px) {
+  .contenedor {
+    grid-template-areas:
+      "amarillo amarillo"
+      "verde azul"
+      "rojo rojo"
+      "naranja naranja";
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .amarillo { grid-area: amarillo; }
+  .verde    { grid-area: verde; }
+  .azul     { grid-area: azul; }
+  .rojo     { grid-area: rojo; }
+  .naranja  { grid-area: naranja; }
+}
+
+/* --- Diseño pequeño (Móvil) --- */
+@media (max-width: 600px) {
+  .contenedor {
+    grid-template-areas:
+      "amarillo"
+      "verde"
+      "azul"
+      "rojo"
+      "naranja";
+    grid-template-columns: 1fr;
+  }
+
+  .amarillo { grid-area: amarillo; }
+  .verde    { grid-area: verde; }
+  .azul     { grid-area: azul; }
+  .rojo     { grid-area: rojo; }
+  .naranja  { grid-area: naranja; }
+}
