@@ -1,0 +1,85 @@
+:root{
+    --dice-size: 110px;    /* tamaño de cada cara */
+    --dice-gap: 8px;       /* espacio entre dados */
+    --dice-color: #d21b37; /* color rojo */
+  }
+
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 18px;
+    background: #fff;
+  }
+
+  .wrap{
+    display: flex;
+    gap: var(--dice-gap);
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 6px;
+  }
+
+  .die{
+    width: var(--dice-size);
+    height: var(--dice-size);
+    background: var(--dice-color);
+    border: 6px solid #fff;      /* borde blanco entre dados */
+    box-sizing: border-box;
+    border-radius: 3px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0;
+    padding: 10px;               /* espacio interior para centrar mejor los pips */
+    flex: 0 0 auto;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.06) inset;
+  }
+
+  /* punto (pip) */
+  .pip{
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border-radius: 50%;
+    justify-self: center;
+    align-self: center;
+  }
+
+  /* posiciones en la cuadrícula 3x3:
+     p1 p2 p3
+     p4 p5 p6
+     p7 p8 p9
+  */
+  .p1{ grid-column: 1; grid-row: 1; }
+  .p2{ grid-column: 2; grid-row: 1; }
+  .p3{ grid-column: 3; grid-row: 1; }
+  .p4{ grid-column: 1; grid-row: 2; }
+  .p5{ grid-column: 2; grid-row: 2; }
+  .p6{ grid-column: 3; grid-row: 2; }
+  .p7{ grid-column: 1; grid-row: 3; }
+  .p8{ grid-column: 2; grid-row: 3; }
+  .p9{ grid-column: 3; grid-row: 3; }
+
+  /* caras predefinidas */
+  .die-1 .pip { display:none; } /* ocultamos por defecto y mostramos los que necesitaremos */
+  .die-1 .p5 { display:block; }
+
+  .die-2 .p1, .die-2 .p9 { display:block; }
+
+  .die-3 .p1, .die-3 .p5, .die-3 .p9 { display:block; }
+
+  .die-4 .p1, .die-4 .p3, .die-4 .p7, .die-4 .p9 { display:block; }
+
+  .die-5 .p1, .die-5 .p3, .die-5 .p5, .die-5 .p7, .die-5 .p9 { display:block; }
+
+  .die-6 .p1, .die-6 .p4, .die-6 .p7, .die-6 .p3, .die-6 .p6, .die-6 .p9 { display:block; }
+
+  /* ocultar todos los pips por defecto, luego cada cara muestra sus necesarios */
+  .pip { display: none; }
+
+  /* pequeño ajuste responsive: reducir tamaño en pantallas muy pequeñas */
+  @media (max-width:480px){
+    :root { --dice-size: 80px; --dice-gap:6px; }
+    .pip { width:14px; height:14px; }
+  }

@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ccc;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tablero-container {
+    display: grid;
+    grid-template-columns: 30px repeat(8, 60px) 30px;
+    grid-template-rows: 30px repeat(8, 60px) 30px;
+    background-color: #d2b48c;
+}
+
+.numero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    background-color: #d2b48c;
+}
+
+.letra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    background-color: #d2b48c;
+}
+
+.letra-superior {
+    transform: rotate(180deg);
+}
+
+.casilla {
+    width: 60px;
+    height: 60px;
+}
+
+.blanca {
+    background-color: #fff8dc;
+}
+
+.negra {
+    background-color: #000;
+}
+
+/* Solo las letras de la primera fila del tablero */
+.tablero-container > .letra:nth-child(n+2):nth-child(-n+9) {
+    transform: rotate(180deg);
+}
+
+.tablero-container > .numero:nth-child(10n) {
+    transform: rotate(180deg);
+}

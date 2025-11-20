@@ -1,0 +1,48 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%); /* fondo chulo */
+  gap: 12px;
+}
+
+.domino {
+  width: 80px;
+  height: 160px;
+  background: white;
+  border: 3px solid #222;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: 1fr auto 1fr; /* mitad superior | divisor | mitad inferior */
+  padding: 6px;
+}
+
+.half {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+.divider {
+  height: 3px;
+  background: #222;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #222;
+  border-radius: 50%;
+}
+
+/* Posiciones dentro de la cuadrícula */
+.tl { grid-area: 1 / 1; }
+.tr { grid-area: 1 / 3; }
+.ml { grid-area: 2 / 1; }
+.mr { grid-area: 2 / 3; }
+.bl { grid-area: 3 / 1; }
+.br { grid-area: 3 / 3; }
+.c  { grid-area: 2 / 2; }

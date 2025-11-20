@@ -1,0 +1,247 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.main-wrapper {
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+}
+
+header {
+    background-color: #3366cc;
+    color: white;
+    padding: 10px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.logo-left, .logo-right {
+    height: 60px;
+    width: auto;
+}
+
+.tabs-nav {
+    flex: 3;
+    border-right: 1px solid #ccc;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tabs-nav input[type="radio"] {
+    display: none;
+}
+
+.tabs-nav label {
+    flex-grow: 1;
+    text-align: center;
+    padding: 15px 10px;
+    cursor: pointer;
+    background-color: #eee;
+    color: #666;
+    transition: background-color 0.3s, color 0.3s;
+    border-right: 1px solid #ccc;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    order: 1;
+    min-width: 100px;
+    white-space: nowrap;
+    flex-basis: 0;
+    max-height: 16px;
+}
+
+.tabs-nav label:last-of-type {
+    border-right: none;
+}
+
+.tabs-nav input[type="radio"]:checked + label {
+    background-color: #3366cc;
+    color: white;
+    border-bottom: 3px solid #3366cc;
+}
+
+.tab-content {
+    width: 100%;
+    order: 3;
+    display: none;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4,
+#tab5:checked ~ #content5 {
+    display: block;
+}
+
+.main-image {
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+    border: 1px solid #ddd;
+}
+
+.sidebar {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    order: 2;
+}
+
+.sidebar a {
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar img {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #3366cc;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-icons a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 1.2em;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.5);
+}
+
+@media (max-width: 768px) {
+    .main-wrapper {
+        flex-direction: column;
+        margin: 0;
+        border: none;
+        box-shadow: none;
+    }
+
+    .tabs-nav {
+        flex: none;
+        border-right: none;
+        flex-direction: column;
+    }
+
+    .tabs-nav label {
+        order: initial;
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+        text-align: left;
+        background-color: #f9f9f9;
+        color: #333;
+        padding: 15px 20px;
+    }
+
+    .tabs-nav input[type="radio"]:checked + label {
+        background-color: #3366cc;
+        color: white;
+        border-bottom: 1px solid #3366cc;
+    }
+
+    .tab-content {
+        order: initial;
+        display: none;
+        border-bottom: 1px solid #ccc;
+        padding: 20px;
+    }
+
+    #tab1:checked + label + .tab-content,
+    #tab2:checked + label + .tab-content,
+    #tab3:checked + label + .tab-content,
+    #tab4:checked + label + .tab-content,
+    #tab5:checked + label + .tab-content {
+        display: block;
+        max-height: none; 
+        overflow: visible;
+    }
+    
+    .tabs-nav input[type="radio"]:not(:checked) + label + .tab-content {
+        display: none;
+    }
+
+    .sidebar {
+        flex: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+        padding: 10px;
+        border-top: 1px solid #ccc;
+    }
+
+    .sidebar a {
+        width: 45%;
+        max-width: none;
+    }
+
+    .sidebar img {
+        width: 100%;
+        max-width: none;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .logo-left, .logo-right {
+        height: 50px;
+    }
+}
