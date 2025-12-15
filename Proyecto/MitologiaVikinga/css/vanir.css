@@ -1,0 +1,280 @@
+/* 
+ * ------------------------------------------------------------------
+ * HOJA DE ESTILOS: DIOSES VANIR
+ * ------------------------------------------------------------------
+ * Estilos específicos para la familia Vanir (Freyja, Freyr, etc.).
+ * El diseño evoca naturaleza, magia, fertilidad y misticismo.
+ * 
+ * ENFOQUE VISUAL:
+ * - Dominio del Plata (#c0c0c0) y Verde/Azul sugerido en la atmósfera
+ * - Sensación más orgánica y mágica que la rígida estructura Aesir
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:wght@400;500;600;700&display=swap');
+
+/* ==========================================================================
+   1. VARIABLES ESPECÍFICAS VANIR
+   ========================================================================== */
+:root {
+    --color-bg: #0d1117;
+    /* Un tono más profundo y natural */
+    --color-card: #161b22;
+    /* Oscuro pero cálido */
+    --color-primary: #c0c0c0;
+    /* PLATA: Color principal de Vanir */
+    --color-secondary: #d4af37;
+    /* Oro como secundario (riqueza) */
+    --color-magic: #4a9eff;
+    /* Un toque de magia para hover */
+
+    --color-text: #e8e8e8;
+    --color-muted: #8b949e;
+    --color-border: #30363d;
+
+    --font-hero: 'Cinzel', serif;
+    --font-body: 'Lora', serif;
+
+    --transition-suave: all 0.4s ease;
+    /* Transiciones un poco más lentas/mágicas */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    line-height: 1.8;
+    /* Fondo sutilmente diferente a Aesir */
+    background-image: radial-gradient(circle at 50% 100%, rgba(192, 192, 192, 0.05), transparent 60%);
+}
+
+/* ==========================================================================
+   2. ELEMENTOS COMUNES (Modificados para Vanir)
+   ========================================================================== */
+header {
+    border-bottom: 1px solid var(--color-border);
+    padding: 1.5rem 0;
+    background-color: rgba(13, 17, 23, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-family: var(--font-hero);
+    color: var(--color-text);
+    /* Blanco para Vanir, menos ostentoso */
+    font-size: 2rem;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--color-muted);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition-suave);
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--color-primary);
+    text-shadow: 0 0 10px rgba(192, 192, 192, 0.5);
+    /* Brillo plateado */
+}
+
+footer {
+    border-top: 1px solid var(--color-border);
+    padding: 2rem;
+    text-align: center;
+    color: var(--color-muted);
+    margin-top: 3rem;
+}
+
+/* ==========================================================================
+   3. CONTENIDO ESPECÍFICO VANIR
+   ========================================================================== */
+
+/* Cabecera Vanir */
+.page-header {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.page-header h2 {
+    font-family: var(--font-hero);
+    font-size: 3rem;
+    color: var(--color-primary);
+    /* Plata */
+    margin-bottom: 1rem;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: var(--color-muted);
+    text-decoration: none;
+}
+
+.back-link:hover {
+    color: var(--color-primary);
+}
+
+.divider-line {
+    height: 2px;
+    width: 150px;
+    background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+    margin: 0 auto 2rem;
+}
+
+.page-header p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: var(--color-muted);
+}
+
+.nordic-divider {
+    display: none;
+    /* Menos separaciones rígidas para Vanir */
+}
+
+/* GRID DE DIOSES VANIR */
+.gods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+/* Tarjeta Vanir - Más suave */
+.card {
+    background-color: var(--color-card);
+    border: 1px solid transparent;
+    /* Sin borde por defecto */
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    /* Más redondeado = Más orgánico */
+    transition: var(--transition-suave);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    background-color: #21262d;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.card h3 {
+    font-family: var(--font-hero);
+    font-size: 1.8rem;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: var(--color-secondary);
+    /* Oro para el subtítulo */
+    font-style: italic;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.description {
+    margin-bottom: 2rem;
+    color: var(--color-muted);
+    flex-grow: 1;
+}
+
+/* Etiquetas Estilo Vanir */
+.attributes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+.attribute-tag {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    /* Muy ligero */
+    color: var(--color-text);
+    border-radius: 20px;
+    transition: var(--transition-suave);
+}
+
+.card:hover .attribute-tag {
+    background-color: rgba(192, 192, 192, 0.1);
+    color: var(--color-primary);
+}
+
+/* Botón Vanir */
+.btn {
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(45deg, var(--color-border), transparent);
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: var(--transition-suave);
+}
+
+.btn:hover {
+    background: var(--color-primary);
+    color: var(--color-bg);
+    box-shadow: 0 0 20px rgba(192, 192, 192, 0.4);
+}
+
+/* Intro Footer */
+.intro-section {
+    text-align: center;
+    padding: 3rem 0;
+    border-top: 1px solid var(--color-border);
+}
+
+/* ==========================================================================
+   4. RESPONSIVIDAD
+   ========================================================================== */
+@media (max-width: 768px) {
+    .gods-grid {
+        grid-template-columns: 1fr;
+    }
+
+    header .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .page-header h2 {
+        font-size: 2.2rem;
+    }
+}
